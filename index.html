@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrazar Vaccine Booklet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #5f9aad;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            text-decoration: none;
+            background: #e9ed79;
+            color: black;
+            border-radius: 5px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #0080b3;
+        }
+        .flyer {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .subcategory-container {
+            display: none;
+        }
+    </style>
+    <script>
+        function showSubcategories(language) {
+            // Hide all subcategory containers
+            document.querySelectorAll('.subcategory-container').forEach(container => container.style.display = 'none');
+
+            // Hide all flyers
+            document.querySelectorAll('.flyer').forEach(img => img.style.display = 'none');
+
+            // Show the subcategory container for the selected language
+            const subcategoryContainer = document.getElementById(`${language}-subcategories`);
+            if (subcategoryContainer) {
+                subcategoryContainer.style.display = 'block';
+            }
+        }
+
+        function showFlyer(subcategory) {
+            // Hide all flyers
+            document.querySelectorAll('.flyer').forEach(img => img.style.display = 'none');
+
+            // Show flyers for the selected subcategory
+            document.querySelectorAll(`.${subcategory}`).forEach(img => img.style.display = 'block');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Abrazar Vaccine Booklet</h1>
+        <p>Select your preferred language:</p>
+        
+        <button class="btn" onclick="showSubcategories('english')">English</button>
+        <button class="btn" onclick="showSubcategories('spanish')">Spanish</button>
+        <button class="btn" onclick="showSubcategories('vietnamese')">Vietnamese</button>
+
+        <!-- English Subcategories -->
+        <div id="english-subcategories" class="subcategory-container">            
+	    <p>Select a subcategory:</p>
+            <button class="btn" onclick="showFlyer('english-sub1')">Flu/RSV/COVID-19 Vaccines</button>
+            <button class="btn" onclick="showFlyer('english-sub2')">Vaccine during Pregnancy</button>
+            <button class="btn" onclick="showFlyer('english-sub3')">Infants & Young Children</button>
+            <button class="btn" onclick="showFlyer('english-sub4')">Preteens & Teens</button>
+            <button class="btn" onclick="showFlyer('english-sub5')">HEPATITIS B</button>
+            <button class="btn" onclick="showFlyer('english-sub6')">Measles</button>
+            <button class="btn" onclick="showFlyer('english-sub7')">Whooping Cough</button>
+            <button class="btn" onclick="showFlyer('english-sub8')">Vaccine Charts</button>
+            <button class="btn" onclick="showFlyer('english-sub9')">MPOX</button>
+            <!-- Add more subcategory buttons as needed -->
+        </div>
+
+        <!-- Spanish Subcategories -->
+        <div id="spanish-subcategories" class="subcategory-container">
+            <p>Select a subcategory:</p>
+            <button class="btn" onclick="showFlyer('spanish-sub1')">la influenza (gripe o “flu”)/VRS/ y el COVID-19</button>
+            <button class="btn" onclick="showFlyer('spanish-sub2')">¡Vacúnese durante el embarazo!</button>
+            <button class="btn" onclick="showFlyer('spanish-sub3')">Bebés y niños pequeños</button>
+            <button class="btn" onclick="showFlyer('spanish-sub4')">Preadolescentes y adolescentes</button>
+            <button class="btn" onclick="showFlyer('spanish-sub5')">HEPATITIS B</button>
+            <button class="btn" onclick="showFlyer('spanish-sub6')">Sarampión</button>
+            <button class="btn" onclick="showFlyer('spanish-sub7')">La Tos Ferina</button>
+            <button class="btn" onclick="showFlyer('spanish-sub8')">Cuadros de vacunas</button>
+            <!-- Add more subcategory buttons as needed -->
+        </div>
+
+        <!-- Vietnamese Subcategories -->
+        <div id="vietnamese-subcategories" class="subcategory-container">
+            <p>Select a subcategory:</p>
+            <button class="btn" onclick="showFlyer('vietnamese-sub1')">Cúm, RSV và COVID-19</button>
+            <button class="btn" onclick="showFlyer('vietnamese-sub2')">Viêm gan B</button>
+            <button class="btn" onclick="showFlyer('vietnamese-sub3')">Bệnh sởi</button>
+            <!-- Add more subcategory buttons as needed -->
+        </div>
+
+       <!-- Subcategory buttons -->
+	<img src="https://drive.google.com/thumbnail?id=130NC0H0CYTqN5ysLpp1LxJsfaY1LjHCb&sz=w1000" class="flyer english-sub1" alt="English Subcategory 1 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=1vRa1m5z4PF3Y4SV-mJuc93UQe85o_l06&sz=w1000" class="flyer english-sub1" alt="English Subcategory 1 Flyer 2">
+	<img src="https://drive.google.com/thumbnail?id=1Z_SB_2GxL10NpcwLzB-EjAQGgYM4MuJW&sz=w1000" class="flyer english-sub1" alt="English Subcategory 1 Flyer 3">
+	<img src="https://drive.google.com/thumbnail?id=1PBbPBkQ763y-fL-g-EFy_TCT5ADHGPin&sz=w1000" class="flyer english-sub1" alt="English Subcategory 1 Flyer 4">
+        <!-- Add more flyers for English Subcategory 1 -->
+
+        <!-- English Subcategory 2 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1mYKv55YkviFjHOAZUwf3tvxGPgnVSAiu&sz=w1000" class="flyer english-sub2" alt="English Subcategory 2 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=1sQJ4mKC1mWVq9qwn9QbUplSmDt6-ly4x&sz=w1000" class="flyer english-sub2" alt="English Subcategory 2 Flyer 2">
+        <!-- Add more flyers for English Subcategory 2 -->
+
+        <!-- English Subcategory 3 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1rdURLLZDpi750kdm8fMKckPI0sR46wO_&sz=w1000" class="flyer english-sub3" alt="English Subcategory 3 Flyer 1">
+        <!-- Add more flyers for English Subcategory 3 -->
+
+        <!-- English Subcategory 4 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1QegcDvaKTwiqnbn53KkYmUj_2A08ohvC&sz=w1000" class="flyer english-sub4" alt="English Subcategory 4 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=12gkWkxBHKadmpBTvrbse5xcR0FK1ZD-D&sz=w1000" class="flyer english-sub4" alt="English Subcategory 4 Flyer 2">
+	<img src="https://drive.google.com/thumbnail?id=1qa-B6F4uMqgs-wSlMeENwhBsYZi_xd99&sz=w1000" class="flyer english-sub4" alt="English Subcategory 4 Flyer 3">
+	<img src="https://drive.google.com/thumbnail?id=1BeIDd3g_2MVRCwAUf5N5EopJFO0Edn_9&sz=w1000" class="flyer english-sub4" alt="English Subcategory 4 Flyer 4">
+	<img src="https://drive.google.com/thumbnail?id=1l3WvQA2atcLyBAM_LTjv56pIl4B8z3R9&sz=w1000" class="flyer english-sub4" alt="English Subcategory 4 Flyer 5">
+        <!-- Add more flyers for English Subcategory 4 -->
+
+        <!-- English Subcategory 5 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=12ZbKkJXKjwaE8alUBU8uCtSmcI5HKPgO&sz=w1000" class="flyer english-sub5" alt="English Subcategory 5 Flyer 1">
+	<img src="https://drive.google.com/thumbnail?id=1SBB816IDx9xaDVRTTGzTHe0d6oJHrUWd&sz=w1000" class="flyer english-sub5" alt="English Subcategory 5 Flyer 2">
+        <!-- Add more flyers for English Subcategory 5 -->
+
+        <!-- English Subcategory 6 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1UEQ1QcigERpjTyeKtMvV3R4Zf-hoOevg&sz=w1000" class="flyer english-sub6" alt="English Subcategory 6 Flyer 1">
+        <!-- Add more flyers for English Subcategory 6 -->
+
+        <!-- English Subcategory 7 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=14HMmhxhCkIwrJk1yKD4TgYgZ5UZb1f_f&sz=w1000" class="flyer english-sub7" alt="English Subcategory 7 Flyer 1">
+        <!-- Add more flyers for English Subcategory 7 -->
+
+        <!-- English Subcategory 8 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1-eidKVB0tCHLWLQm2ZTdBYU-bNugv7Br&sz=w1000" class="flyer english-sub8" alt="English Subcategory 8 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=1WHkdkp_n-MuprpDUrwbnOQZxb6Y8ynN4&sz=w1000" class="flyer english-sub8" alt="English Subcategory 8 Flyer 2">
+        <img src="https://drive.google.com/thumbnail?id=1o5Rh3YE6c8Ed6-sspTelCN1E1VrpAckZ&sz=w1000" class="flyer english-sub8" alt="English Subcategory 8 Flyer 3">
+        <img src="https://drive.google.com/thumbnail?id=1JHGNqf-zkORBo6XcoEt6dGruvleTD8de&sz=w1000" class="flyer english-sub8" alt="English Subcategory 8 Flyer 4">
+        <img src="https://drive.google.com/thumbnail?id=1DqHMadQFy4HhdR8Gbj5fOL4L8f5ETFP-&sz=w1000" class="flyer english-sub8" alt="English Subcategory 8 Flyer 5">
+        <img src="https://drive.google.com/thumbnail?id=1QyaHi607bTzUFtJGqsYEjMfmOFJH4pkD&sz=w1000" class="flyer english-sub8" alt="English Subcategory 8 Flyer 6">
+        <!-- Add more flyers for English Subcategory 8 -->
+
+
+	<!-- Spanish Subcategory 1 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1i7EetKnpA-lkjk6hNNFSknwpgrfQG1Uo&sz=w1000" class="flyer spanish-sub1" alt="Spanish Subcategory 1 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=1DrAKQOjtJLpcPejprOmDEDH34jPsgVKu&sz=w1000" class="flyer spanish-sub1" alt="Spanish Subcategory 1 Flyer 2">
+        <img src="https://drive.google.com/thumbnail?id=1yijkuSbDwecYvPGVz6ryZgPPVW_DYQPu&sz=w1000" class="flyer spanish-sub1" alt="Spanish Subcategory 1 Flyer 3">
+        <img src="https://drive.google.com/thumbnail?id=1XCawESkClvNOZhIsWFMfQjR0dxiZOTx8&sz=w1000" class="flyer spanish-sub1" alt="Spanish Subcategory 1 Flyer 4">
+        <!-- Add more flyers for English Subcategory 1 -->
+
+        <!-- Spanish Subcategory 2 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1EY_B-eS1CImCjgqiYuKTXQtG5HLmwzgb&sz=w1000" class="flyer spanish-sub2" alt="Spanish Subcategory 2 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=1WZl1ytyXF2sox8uDxQeCO_10_OOkMzJj&sz=w1000" class="flyer spanish-sub2" alt="Spanish Subcategory 2 Flyer 2">
+        <!-- Add more flyers for English Subcategory 2 -->
+       
+	<!-- Spanish Subcategory 3 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1kNl7z5xpII-PJuskBt4dnXD33QbmPzec&sz=w1000" class="flyer spanish-sub3" alt="Spanish Subcategory 3 Flyer 1">
+        <!-- Add more flyers for English Subcategory 3 -->
+
+	<!-- Spanish Subcategory 4 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1QegcDvaKTwiqnbn53KkYmUj_2A08ohvC&sz=w1000" class="flyer spanish-sub4" alt="Spanish Subcategory 4 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=1nMKTpZNPF_jvTomHXSZkP7RjVSFASdTM&sz=w1000" class="flyer spanish-sub4" alt="Spanish Subcategory 4 Flyer 2">
+        <img src="https://drive.google.com/thumbnail?id=1DHogtjf3SVqdvCEgUtVjNRqYX8tZbrX5&sz=w1000" class="flyer spanish-sub4" alt="Spanish Subcategory 4 Flyer 3">
+        <!-- Add more flyers for English Subcategory 4 -->
+
+	<!-- Spanish Subcategory 5 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1rURh4z5vbgWxBLW6r2TDxflQJ7_qoWys&sz=w1000" class="flyer spanish-sub5" alt="Spanish Subcategory 5 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=1SDngyyI_PZZE9pi13wrxjp8HOqSaS5cR&sz=w1000" class="flyer spanish-sub5" alt="Spanish Subcategory 5 Flyer 2">
+        <!-- Add more flyers for English Subcategory 5 -->
+
+	<!-- Spanish Subcategory 6 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1AP5RaU0QiguJFau4yvVoyKTOk1H0LzRe&sz=w1000" class="flyer spanish-sub6" alt="Spanish Subcategory 6 Flyer 1">
+        <!-- Add more flyers for English Subcategory 6 -->
+
+	<!-- Spanish Subcategory 7 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1DHogtjf3SVqdvCEgUtVjNRqYX8tZbrX5&sz=w1000" class="flyer spanish-sub7" alt="Spanish Subcategory 7 Flyer 1">
+        <!-- Add more flyers for English Subcategory 7 -->
+
+        <!-- Spanish Subcategory 8 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1MsoUwXVTptrUspGdJTJ2kD-7ZpeY24TB&sz=w1000" class="flyer spanish-sub8" alt="Spanish Subcategory 8 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=1hIAelQGJE_hxRr6mqL5mpe06GDsUG9eK&sz=w1000" class="flyer spanish-sub8" alt="Spanish Subcategory 8 Flyer 2">
+        <img src="https://drive.google.com/thumbnail?id=1xgttPpk2qYUzv1s-twj9IiRrOqeC-fEp&sz=w1000" class="flyer spanish-sub8" alt="Spanish Subcategory 8 Flyer 3">
+        <img src="https://drive.google.com/thumbnail?id=1znY8zlAKVkfxVmQFCPKT_YvSAZGewUPA&sz=w1000" class="flyer spanish-sub8" alt="Spanish Subcategory 8 Flyer 4">
+        <img src="https://drive.google.com/thumbnail?id=1mQN-2fQF_86luFpqwUq6yCeakPIg9Dmf&sz=w1000" class="flyer spanish-sub8" alt="Spanish Subcategory 8 Flyer 5">
+        <img src="https://drive.google.com/thumbnail?id=14t3g9uVDxi46pmC4Jf3tLbnEDn8BOh-7&sz=w1000" class="flyer spanish-sub8" alt="Spanish Subcategory 8 Flyer 6">
+        <!-- Add more flyers for Spanish Subcategory 8 -->
+
+
+        <!-- Vietnamese Subcategory 1 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1qrt1FRUfrExwECXT2eKik3qHMH6h_MKj&sz=w1000" class="flyer vietnamese-sub1" alt="Vietnamese Subcategory 1 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=16pbAbgxIA2Hs0CUKQfzyYlY6NEwyeFAq&sz=w1000" class="flyer vietnamese-sub1" alt="Vietnamese Subcategory 1 Flyer 2">
+        <!-- Add more flyers for English Subcategory 1 -->
+
+        <!-- Vietnamese Subcategory 2 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1JReyfv-idzbba1ZF5axquZNvMh6IHvwn&sz=w1000" class="flyer vietnamese-sub2" alt="Vietnamese Subcategory 2 Flyer 1">
+        <img src="https://drive.google.com/thumbnail?id=1TRY7v8zdmuMgyOV8WkE6XPIew9dlOhO7&sz=w1000" class="flyer vietnamese-sub2" alt="Vietnamese Subcategory 2 Flyer 2">
+        <!-- Add more flyers for English Subcategory 2 -->
+
+        <!-- Vietnamese Subcategory 3 Flyers -->
+        <img src="https://drive.google.com/thumbnail?id=1qTWikQci6KmUw7Hky_y1YEF3aB_OdZV5&sz=w1000" class="flyer vietnamese-sub3" alt="Vietnamese Subcategory 3 Flyer 1">
+        <!-- Add more flyers for English Subcategory 3 -->
+
+
+        <!-- Repeat for other subcategories and languages -->
+    </div>
+</body>
+</html>
